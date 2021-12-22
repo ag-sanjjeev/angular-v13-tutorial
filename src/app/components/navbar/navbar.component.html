@@ -1,0 +1,25 @@
+
+<div class="container-fluid" *ngIf="isLogined">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+
+        <a routerLink="/home" class="navbar-brand">Home</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a routerLink="/products" class="nav-link">Products</a></li>                
+                <li class="nav-item"><a routerLink="/purchase" class="nav-link">Purchase</a></li>
+                <li class="nav-item"><a routerLink="/sales" class="nav-link">Sales</a></li>                
+                <li class="nav-item">
+                    <app-button (onClick)="logout()" btnText="Logout" btnClass="nav-link text-white"></app-button>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+
+</div>

@@ -1,0 +1,210 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid mt-5">
+
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center text-center">
+                    <h2 class="card-title">Products Details</h2>
+                    <button type="button" class="btn btn-success"  data-bs-toggle="modal" data-bs-target="#formPurchase" >Add</button>
+                </div>
+
+                <div class="card-body">
+                    <table class="table table-lg table-responsive table-hover table-bordered border-danger">
+                        <thead><tr>
+                            <th width="10%">S.No</th>
+                            <th>Bill No</th>
+                            <th>Date</th>
+                            <th>Customer Name</th>
+                            <th>Total Items</th>
+                            <th>Net Amount</th>
+                            <th width="20%">Actions</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="7">
+                                    no data
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="modal-dialog model-xl modal-dialog-scrollable modal-dialog-scrollable fade" id="formPurchase" tabindex="-1" data-bs-backdrop="true" aria-labelledby="formPurchaseLabel" aria-hidden="true">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="formPurchaseTitle">Purchase Form</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+            <form action="post" [formGroup]="purchaseForm"  ngNativeValidate>
+
+                <div class="row">
+
+                    <div class="col-md-3">
+
+                        <div class="mb-3">
+                            <label for="billno" class="form-label">Bill No</label>
+                            <input formControlName="billno" type="text" class="form-control" name="billno" id="billno" readonly required>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <div class="mb-3">
+                            <label for="purchasedate" class="form-label">Date</label>
+                            <input formControlName="purchasedate" type="date" class="form-control" name="purchasedate" id="purchasedate" value="{{ currentDate }}" required>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <div class="mb-3">
+                            <label for="suppliername" class="form-label">Supplier Name</label>
+                            <input formControlName="suppliername" type="text" class="form-control" name="suppliername" id="suppliername" required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <table cellpadding="10" class="table border-primary">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th width="35%">Product Name</th>
+                                    <th>Price</th>
+                                    <th width="10%">Quantity</th>
+                                    <th>Amount</th>
+                                    <th width="15%">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="sublist_input_area">
+                                    <td>
+                                        <label for="">#</label>
+                                    </td>
+                                    <td>
+                                        <select formControlName="productname" name="productname" id="productname" class="form-control" (change)="onProductSelect($event)" required>
+                                            <option value="">Select Product</option>
+                                            <option *ngFor="let productitem of products;" value="{{productitem.productname}}" [attr.data-id]="productitem.id" [attr.data-price]="productitem.price">{{ productitem.productname }}</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input formControlName="price" type="number" name="price" id="price" class="form-control" required>
+                                    </td>
+                                    <td>
+                                        <input formControlName="quantity" type="number" name="quantity" id="quantity" class="form-control" min="1" required>
+                                    </td>
+                                    <td>
+                                        <input formControlName="amount" type="number" name="amount" id="amount" class="form-control" min="0" readonly required>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-success" *ngIf="showSubAdd" (click)="addProducts()">Add</button>
+                                        <button type="button" class="btn btn-success" *ngIf="showSubUpdate">Update</button>
+                                    </td>
+                                </tr>
+
+                                <tr *ngFor="let item of productlist.slice().reverse(); let i = index;">
+                                    <td>{{ i + 1 }}</td>
+                                    <td>{{ item.productname }}</td>
+                                    <td>{{ item.price }}</td>
+                                    <td>{{ item.quantity }}</td>
+                                    <td>{{ item.amount }}</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-warning"> <i class="fa fa-edit"></i></button>
+                                            <button type="button" class="btn btn-danger"> <i class="fa fa-trash"></i></button>
+                                        </div>                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <div class="row justify-content-between">
+
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="modeofpay" class="form-label">Mode of Payment</label>
+                            <select formControlName="modeofpay" class="form-control" name="modeofpay" id="modeofpay" required>
+                                <option value="cash">Cash</option>
+                                <option value="upi">UPI</option>
+                                <option value="neft">NEFT</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="mb-3">
+                            <label for="totalamount" class="form-label">Total Amount</label>
+                            <input formControlName="totalamount" type="number" class="form-control" name="totalamount" id="totalamount" readonly required />                                
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="taxpercent" class="form-label">Tax %</label>
+                            <input formControlName="taxpercent" type="number" class="form-control" name="taxpercent" id="taxpercent" required />                                
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="taxamount" class="form-label">Tax Amount</label>
+                            <input formControlName="taxamount" type="number" class="form-control" name="taxamount" id="taxamount" required />                                
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="grossamount" class="form-label">Gross Amount</label>
+                            <input formControlName="grossamount" type="number" class="form-control" name="grossamount" id="grossamount" required />                                
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="roundoff" class="form-label">Round Off</label>
+                            <input formControlName="roundoff" type="number" class="form-control" name="roundoff" id="roundoff" required />                                
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="netamount" class="form-label">Total Amount</label>
+                            <input formControlName="netamount" type="number" class="form-control" name="netamount" id="netamount" required />                                
+                        </div>
+
+                    </div>
+
+                </div>
+                  
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="cancelModalBtn" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="updateModalBtn" *ngIf="showMainUpdate" >Update</button>
+            <button type="button" class="btn btn-primary" id="saveModalBtn" *ngIf="showMainSave">Save</button>
+          </div>
+        </div>
+    </div>
+
+    
+
+</div>

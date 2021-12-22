@@ -1,0 +1,792 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullname": "sanjjeev",
+      "email": "sanjjeev@mail.com",
+      "password": "123",
+      "agreeterms": true,
+      "authtoken": "0548a7acc01267ef878c879023dc3b75dca37e98",
+      "ipaddress": "103.99.151.83",
+      "activestatus": true,
+      "created_at": "2021-12-16 09:12:31",
+      "modified_at": "2021-12-16 09:12:31"
+    },
+    {
+      "id": 2,
+      "fullname": "test1",
+      "email": "test1@mail.com",
+      "password": "1234",
+      "agreeterms": true,
+      "authtoken": "5c825266a212c17b6aa12cca8c8102d73f6757e1",
+      "ipaddress": "103.99.151.83",
+      "activestatus": true,
+      "created_at": "2021-12-16 11:07:12",
+      "modified_at": "2021-12-16 11:07:12"
+    },
+    {
+      "id": 3,
+      "fullname": "tominic",
+      "email": "tom007@gmail .com",
+      "password": "sweetday",
+      "agreeterms": true,
+      "authtoken": "8801b8a45ebc3d1656bb77926faa6e8a5b456e4f",
+      "ipaddress": "103.99.151.83",
+      "activestatus": true,
+      "created_at": "2021-12-18 11:40:13",
+      "modified_at": "2021-12-18 11:40:13"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productname": "sweet",
+      "price": 30
+    },
+    {
+      "productname": "Chocolate",
+      "price": 30,
+      "id": 3
+    },
+    {
+      "productname": "milk",
+      "price": 42,
+      "id": 4
+    },
+    {
+      "productname": "mango",
+      "price": 32,
+      "id": 5
+    },
+    {
+      "id": 7,
+      "productname": "cake",
+      "price": 150
+    },
+    {
+      "productname": "water",
+      "price": 15,
+      "id": 8
+    },
+    {
+      "productname": "toys",
+      "price": 50,
+      "id": 9
+    },
+    {
+      "productname": "bat",
+      "price": 600,
+      "id": 10
+    },
+    {
+      "productname": "shoe",
+      "price": 450,
+      "id": 11
+    },
+    {
+      "productname": "watch",
+      "price": 720,
+      "id": 12
+    }
+  ],
+  "purchase": [
+    {
+      "billno": "PUR-0001",
+      "purchasedate": "2021-12-18",
+      "suppliername": "abc supplier",
+      "productname": "Chocolate",
+      "price": "30",
+      "quantity": 2,
+      "amount": 60,
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "billno": "PUR-0002",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "3",
+          "productname": "Chocolate",
+          "price": "30",
+          "quantity": 2,
+          "amount": 60
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": ""
+    },
+    {
+      "id": 3,
+      "billno": "PUR-0003",
+      "purchasedate": "2021-12-18",
+      "suppliername": "naga",
+      "products": [
+        {
+          "productid": "1",
+          "productname": "Chocolate",
+          "price": "30",
+          "quantity": 200,
+          "amount": 6000
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": 5,
+      "taxamount": 1000,
+      "grossamount": 111,
+      "roundoff": 444,
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 4,
+      "billno": "0003",
+      "purchasedate": "2021-12-18",
+      "suppliername": "naga",
+      "products": [
+        {
+          "productid": "1",
+          "productname": "Chocolate",
+          "price": "30",
+          "quantity": 200,
+          "amount": 6000
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": 5,
+      "taxamount": 1000,
+      "grossamount": 111,
+      "roundoff": 444,
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 5,
+      "billno": "0005",
+      "purchasedate": "2021-12-18",
+      "suppliername": "naga",
+      "products": [
+        {
+          "productid": "1",
+          "productname": "Chocolate",
+          "price": "30",
+          "quantity": 200,
+          "amount": 6000
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": 5,
+      "taxamount": 1000,
+      "grossamount": 111,
+      "roundoff": 444,
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 6,
+      "billno": "PUR-0006",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "1",
+          "productname": "sweet",
+          "price": "30",
+          "quantity": 1,
+          "amount": 30
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 7,
+      "billno": "PUR-0007",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "4",
+          "productname": "milk",
+          "price": "42",
+          "quantity": 2,
+          "amount": 84
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 8,
+      "billno": "PUR-0008",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "id": 8,
+          "billno": "PUR-0008",
+          "purchasedate": "2021-12-18",
+          "suppliername": "test",
+          "products": [
+            {
+              "productid": "5",
+              "productname": "mango",
+              "price": "32",
+              "quantity": 2,
+              "amount": 64
+            }
+          ],
+          "modeofpay": "cash",
+          "totalamount": "",
+          "taxpercent": "",
+          "taxamount": "",
+          "grossamount": "",
+          "roundoff": "",
+          "netamount": "",
+          "savestatus": false
+        },
+        {
+          "productid": "8",
+          "productname": "water",
+          "price": "15",
+          "quantity": 2,
+          "amount": 30
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 9,
+      "billno": "PUR-0009",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "id": 9,
+          "billno": "PUR-0009",
+          "purchasedate": "2021-12-18",
+          "suppliername": "test",
+          "products": [
+            {
+              "productid": "7",
+              "productname": "cake",
+              "price": "150",
+              "quantity": 2,
+              "amount": 300
+            }
+          ],
+          "modeofpay": "cash",
+          "totalamount": "",
+          "taxpercent": "",
+          "taxamount": "",
+          "grossamount": "",
+          "roundoff": "",
+          "netamount": "",
+          "savestatus": false
+        },
+        {
+          "productid": "8",
+          "productname": "water",
+          "price": "15",
+          "quantity": 3,
+          "amount": 45
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 10,
+      "billno": "PUR-0010",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "id": 9,
+          "billno": "PUR-0009",
+          "purchasedate": "2021-12-18",
+          "suppliername": "test",
+          "products": [
+            {
+              "productid": "7",
+              "productname": "cake",
+              "price": "150",
+              "quantity": 2,
+              "amount": 300
+            }
+          ],
+          "modeofpay": "cash",
+          "totalamount": "",
+          "taxpercent": "",
+          "taxamount": "",
+          "grossamount": "",
+          "roundoff": "",
+          "netamount": "",
+          "savestatus": false
+        },
+        {
+          "productid": "9",
+          "productname": "toys",
+          "price": "50",
+          "quantity": 3,
+          "amount": 150
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 11,
+      "billno": "PUR-0011",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "5",
+          "productname": "mango",
+          "price": "32",
+          "quantity": 2,
+          "amount": 64
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 12,
+      "billno": "PUR-0012",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "7",
+          "productname": "cake",
+          "price": "150",
+          "quantity": 3,
+          "amount": 450
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 13,
+      "billno": "PUR-0013",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "8",
+          "productname": "water",
+          "price": "15",
+          "quantity": 2,
+          "amount": 30
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 14,
+      "billno": "PUR-0014",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "9",
+          "productname": "toys",
+          "price": "50",
+          "quantity": 1,
+          "amount": 50
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 15,
+      "billno": "PUR-0015",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "10",
+          "productname": "bat",
+          "price": "600",
+          "quantity": 3,
+          "amount": 1800
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 16,
+      "billno": "PUR-0016",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "4",
+          "productname": "milk",
+          "price": "42",
+          "quantity": 2,
+          "amount": 84
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 17,
+      "billno": "PUR-0017",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "8",
+          "productname": "water",
+          "price": "15",
+          "quantity": 1,
+          "amount": 15
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 18,
+      "billno": "PUR-0018",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "5",
+          "productname": "mango",
+          "price": "32",
+          "quantity": 1,
+          "amount": 32
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 19,
+      "billno": "PUR-0019",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "10",
+          "productname": "bat",
+          "price": "600",
+          "quantity": 1,
+          "amount": 600
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 20,
+      "billno": "PUR-0020",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "5",
+          "productname": "mango",
+          "price": "32",
+          "quantity": 1,
+          "amount": 32
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 21,
+      "billno": "PUR-0021",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "9",
+          "productname": "toys",
+          "price": "50",
+          "quantity": 1,
+          "amount": 50
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 22,
+      "billno": "PUR-0022",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "8",
+          "productname": "water",
+          "price": "15",
+          "quantity": 1,
+          "amount": 15
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 23,
+      "billno": "PUR-0023",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "10",
+          "productname": "bat",
+          "price": "600",
+          "quantity": 1,
+          "amount": 600
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 24,
+      "billno": "PUR-0024",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "7",
+          "productname": "cake",
+          "price": "150",
+          "quantity": 1,
+          "amount": 150
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 25,
+      "billno": "PUR-0025",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "1",
+          "productname": "sweet",
+          "price": "30",
+          "quantity": 1,
+          "amount": 30
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 26,
+      "billno": "PUR-0026",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "5",
+          "productname": "mango",
+          "price": "32",
+          "quantity": 1,
+          "amount": 32
+        },
+        {
+          "productid": "9",
+          "productname": "toys",
+          "price": "50",
+          "quantity": 1,
+          "amount": 50
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    },
+    {
+      "id": 27,
+      "billno": "PUR-0027",
+      "purchasedate": "2021-12-18",
+      "suppliername": "test",
+      "products": [
+        {
+          "productid": "4",
+          "productname": "milk",
+          "price": "42",
+          "quantity": 1,
+          "amount": 42
+        },
+        {
+          "productid": "8",
+          "productname": "water",
+          "price": "15",
+          "quantity": 1,
+          "amount": 15
+        }
+      ],
+      "modeofpay": "cash",
+      "totalamount": "",
+      "taxpercent": "",
+      "taxamount": "",
+      "grossamount": "",
+      "roundoff": "",
+      "netamount": "",
+      "savestatus": false
+    }
+  ],
+  "sales": []
+}

@@ -1,0 +1,10 @@
+.modal-dialog.show {
+    z-index: 10000;
+}
+
+
+.modal-dialog {
+    height: 100%;
+    max-height: 100%;
+    max-width: 1000px !important;
+}
